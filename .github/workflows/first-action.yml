@@ -1,0 +1,17 @@
+# Name of the workflow
+# Mandatory
+name: First Workflow
+
+# Event(s) that trigger the workflow to run
+# Mandatory
+on: workflow_dispatch  # This means we can manually trigger the workflow
+
+# Mandatory
+jobs:
+  first-job:  # Name of the job
+    runs-on: ubuntu-latest  # Where the job will run (machine and OS)
+    steps:
+      - name: Print Greeting
+        run: echo "Hello World" # Command that will be executed in the command line
+      - name: Print Goodbye
+        run: echo "Done - bye!"
